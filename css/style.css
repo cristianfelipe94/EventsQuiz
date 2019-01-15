@@ -50,7 +50,8 @@ body {
   font-size: 10px;
   color: #fff;
   padding: 10px;
-  text-decoration: none; }
+  text-decoration: none;
+  background-color: #73c5a5; }
 
 .bucketEventInformationMolecule {
   margin: 20px 0 30px 60px; }
@@ -75,6 +76,7 @@ body {
   height: 30px;
   border-radius: 100px;
   border: 2px;
+  border-color: black;
   font-weight: bold;
   text-decoration: none; }
 
