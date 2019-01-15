@@ -6,8 +6,10 @@ $secondaryFontFamily : Helvetica , Arial , sans-serif;
 ////////////////
 
 body {
+    cursor: default;
     font-family: $secondaryFontFamily;
-    margin: 50px;
+    margin: 0 auto;
+    padding: 0 50px 0;
     max-width: 1100px;
     width: 100vw;
 }
@@ -48,7 +50,7 @@ body {
     height: 720px;
     position: relative;
     top: 0;
-    width: 50%;
+    width: 55%;
     z-index: -5;
 }
 
@@ -131,16 +133,17 @@ body {
 
 .right-column {
     display: inline-block;    
-    width: 40%;
+    width: 45%;
 }
 
 .bucket-event-inf-module {
-    cursor: pointer;
     margin: 20px 0 30px 60px;
+    width: 70%;
     &:hover {
+        background-color: $mainColor;
         border-left: 15px solid $mainColor;
         padding-left: 20px;
-        transition: border-left 0.6s ease-out;
+        transition: border-left, 0.6s ease-out;
     }
 }
 
