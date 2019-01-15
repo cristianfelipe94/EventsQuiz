@@ -1,1 +1,110 @@
 $mainColor : #73c5a5;
+$mainFontFamily : Georgia, serif;
+$secondaryFontFamily : Helvetica, Arial, sans-serif;
+
+body {
+    width: 100vw;
+    max-width: 1100px;
+    font-family: $mainFontFamily;
+}
+
+.mainTitlePage {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.subTitlePage {
+    font-size: 14px;
+    color: #333;
+}
+
+.btnNextEvent {
+    font-size: 18px;
+    background-color: $mainColor;
+    font-weight: bold;
+    padding: 10px;
+    border: unset;
+}
+
+.leftColumn {
+    color: white;
+    width: 50%;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+}
+
+.rightColumn {
+    width: 40%;
+    display: inline-block;
+}
+
+.mainEventInformationMolecule h2{
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.mainEventInformationMolecule h3{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.mainEventInformationMolecule h4{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.mainEventInformationMolecule a{
+    font-size: 10px;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.bucketEventInformationMolecule {
+    margin: 20px 0 30px 60px;
+}
+
+.bucketEventInformationMolecule h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.bucketEventInformationMolecule h3{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.bucketEventInformationMolecule h4{
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.bucketEventInformationMolecule a{
+    color: #222;
+    background-color: #fff;
+    font-size: 12px;
+    height: 30px;
+    border-radius: 100px;
+    border: 2px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+.mainTitlePage, .subTitlePage {
+    display: block;
+    text-align-last: center;
+}
+
+.eventBackgroundImg {
+    position: absolute;
+    z-index: -5;
+}
