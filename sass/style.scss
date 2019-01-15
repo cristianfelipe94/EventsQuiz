@@ -2,153 +2,69 @@ $mainColor : #73c5a5;
 $mainFontFamily : Georgia , serif;
 $secondaryFontFamily : Helvetica , Arial , sans-serif;
 
+// Global Styles.
+////////////////
+
 body {
-    width: 100vw;
-    max-width: 1100px;
     font-family: $secondaryFontFamily;
     margin: 50px;
+    max-width: 1100px;
+    width: 100vw;
 }
 
-.mainTitlePage {
-    font-size: 45px;
-    margin-bottom: 10px;
-    font-family: $mainFontFamily;
-}
+// Helpers Styles.
+//////////////////
 
-.subTitlePage {
-    font-size: 14px;
-    color: #333;
-}
-
-.btnNextEvent {
-    font-size: 18px;
-    background-color: $mainColor;
-    font-weight: bold;
-    padding: 10px;
-    border: unset;
-    font-family: $mainFontFamily;
-}
-
-.leftColumn {
-    height: 720px;
-    color: white;
-    width: 50%;
-    position: relative;
-    top: 0;
-    background-color: black;
-    z-index: -5;
-    float: left;
-}
-
-.rightColumn {
-    width: 40%;
-    display: inline-block;
-}
-
-.mainEventInformationMolecule {
-    padding: 20px 0 0 14px;
-}
-
-.mainEventInformationMolecule h2{
-    font-size: 40px;
-    color: #fff;
-    margin-bottom: 10px;
-    font-family: $mainFontFamily;
-}
-
-.mainEventInformationMolecule h3{
-    font-size: 24px;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.mainEventInformationMolecule h4{
-    font-size: 24px;
-    color: #fff;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.mainEventInformationMolecule a{
-    font-size: 10px;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.main-event-btn-details {
-    background-color: $mainColor;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    text-align: right;
-    padding: 10px 0; 
-}
-
-.bucketEventInformationMolecule {
-    margin: 20px 0 30px 60px;
-    &:hover {
-        border-left: 15px solid $mainColor;
-        padding-left: 20px;
-    }
-}
-.first-event-molecule {
+.clearing-margin {
     margin-top: 0;
 }
 
-.bucketEventInformationMolecule h2{
-    font-size: 28px;
-    margin: 0;
-    margin-bottom: 10px;
-    font-family: $mainFontFamily;
-}
+// Title Styles.
+////////////////
 
-.bucketEventInformationMolecule h3{
-    font-size: 14px;
-    margin: 0;    
-    margin-bottom: 10px;
-}
-
-.bucketEventInformationMolecule h4{
-    font-size: 14px;
-    margin: 0;    
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.bucketEventInformationMolecule a{
-    color: #222;
-    background-color: #fff;
-    font-size: 12px;
-    height: 30px;
-    border-radius: 100px;
-    border: 2px;
-    border-color: black;
-    font-weight: bold;
-    text-decoration: none;
-    border: 1px solid black;
-    padding: 10px;
-}
-
-.mainTitlePage, .subTitlePage {
+.main-title-page , .sub-title-page {
     display: block;
     text-align-last: center;
 }
 
-.eventBackgroundImg {
-    position: absolute;
+.main-title-page {
+    font-family: $mainFontFamily;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.sub-title-page {
+    color: #333;
+    font-size: 14px;
+}
+
+// Left Column Styles.
+//////////////////////
+
+.left-column {
+    background-color: black;
+    color: #fff;
+    float: left;
+    height: 720px;
+    position: relative;
+    top: 0;
+    width: 50%;
     z-index: -5;
-    width: -webkit-fill-available;
-    opacity: 0.7;
+}
+
+.event-backgroung-img {
     height: -webkit-fill-available;
+    opacity: 0.7;
+    position: absolute;
+    width: -webkit-fill-available;
+    z-index: -5;
 }
 
 .arrow {
-    width: 45px;
+    bottom: 50%;
     position: absolute;
     top: 50%;
-    bottom: 50%;
+    width: 45px;
 }
 
 .arrow-left {
@@ -157,4 +73,105 @@ body {
 
 .arrow-right {
     right: -45px;
+}
+
+.main-event-inf-module {
+    color: #fff;
+    padding: 20px 0 0 14px;
+}
+
+.next-event {
+    background-color: $mainColor;
+    color: #333;
+    display: inline-block;
+    font-family: $mainFontFamily;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.main-event-inf-module h2{
+    font-family: $mainFontFamily;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.main-event-inf-module h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main-event-inf-module h4{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-event-inf-module a{
+    color: #fff;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.main-event-btn-details {
+    background-color: $mainColor;    
+    bottom: 0;
+    cursor: pointer;
+    padding: 10px 0;     
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 100%;
+}
+
+// Right Column Styles.
+///////////////////////
+
+.right-column {
+    display: inline-block;    
+    width: 40%;
+}
+
+.bucket-event-inf-module {
+    cursor: pointer;
+    margin: 20px 0 30px 60px;
+    &:hover {
+        border-left: 15px solid $mainColor;
+        padding-left: 20px;
+        transition: border-left 0.6s ease-out;
+    }
+}
+
+.bucket-event-inf-module h2{
+    font-family: $mainFontFamily;
+    font-size: 28px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.bucket-event-inf-module h3{
+    font-size: 14px;
+    margin: 0;    
+    margin-bottom: 10px;
+}
+
+.bucket-event-inf-module h4{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;    
+    margin-bottom: 10px;
+}
+
+.bucket-event-inf-module a{
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 100px;
+    color: #222;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+    padding: 10px;
+    text-decoration: none;
 }
