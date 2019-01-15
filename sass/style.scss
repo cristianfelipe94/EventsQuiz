@@ -1,16 +1,18 @@
 $mainColor : #73c5a5;
-$mainFontFamily : Georgia, serif;
-$secondaryFontFamily : Helvetica, Arial, sans-serif;
+$mainFontFamily : Georgia , serif;
+$secondaryFontFamily : Helvetica , Arial , sans-serif;
 
 body {
     width: 100vw;
     max-width: 1100px;
-    font-family: $mainFontFamily;
+    font-family: $secondaryFontFamily;
+    margin: 50px;
 }
 
 .mainTitlePage {
     font-size: 45px;
     margin-bottom: 10px;
+    font-family: $mainFontFamily;
 }
 
 .subTitlePage {
@@ -24,16 +26,18 @@ body {
     font-weight: bold;
     padding: 10px;
     border: unset;
+    font-family: $mainFontFamily;
 }
 
 .leftColumn {
     height: 720px;
     color: white;
     width: 50%;
-    display: inline-block;
-    overflow: hidden;
     position: relative;
     top: 0;
+    background-color: black;
+    z-index: -5;
+    float: left;
 }
 
 .rightColumn {
@@ -41,10 +45,15 @@ body {
     display: inline-block;
 }
 
+.mainEventInformationMolecule {
+    padding: 20px 0 0 14px;
+}
+
 .mainEventInformationMolecule h2{
     font-size: 40px;
     color: #fff;
     margin-bottom: 10px;
+    font-family: $mainFontFamily;
 }
 
 .mainEventInformationMolecule h3{
@@ -65,25 +74,45 @@ body {
     color: #fff;
     padding: 10px;
     text-decoration: none;
+}
+
+.main-event-btn-details {
     background-color: $mainColor;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    padding: 10px 0; 
 }
 
 .bucketEventInformationMolecule {
     margin: 20px 0 30px 60px;
+    &:hover {
+        border-left: 15px solid $mainColor;
+        padding-left: 20px;
+    }
+}
+.first-event-molecule {
+    margin-top: 0;
 }
 
 .bucketEventInformationMolecule h2{
     font-size: 28px;
+    margin: 0;
     margin-bottom: 10px;
+    font-family: $mainFontFamily;
 }
 
 .bucketEventInformationMolecule h3{
     font-size: 14px;
+    margin: 0;    
     margin-bottom: 10px;
 }
 
 .bucketEventInformationMolecule h4{
     font-size: 14px;
+    margin: 0;    
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -98,9 +127,9 @@ body {
     border-color: black;
     font-weight: bold;
     text-decoration: none;
+    border: 1px solid black;
+    padding: 10px;
 }
-
-
 
 .mainTitlePage, .subTitlePage {
     display: block;
@@ -110,4 +139,22 @@ body {
 .eventBackgroundImg {
     position: absolute;
     z-index: -5;
+    width: -webkit-fill-available;
+    opacity: 0.7;
+    height: -webkit-fill-available;
+}
+
+.arrow {
+    width: 45px;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+}
+
+.arrow-left {
+    left: -45px;
+}
+
+.arrow-right {
+    right: -45px;
 }
