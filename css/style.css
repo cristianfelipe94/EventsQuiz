@@ -19,6 +19,7 @@ body {
   border: unset; }
 
 .leftColumn {
+  height: 720px;
   color: white;
   width: 50%;
   display: inline-block;
