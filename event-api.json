@@ -1,0 +1,247 @@
+{
+    "events": [
+    {
+        "id": "53567404549",
+        "url": "https://www.eventbrite.com/e/rock-to-ice-clinic-ouray-ice-climbing-festival-tickets-53567404549",
+        "name":
+        {
+            "text": "ROCK to ICE Clinic - Ouray Ice Climbing Festival"
+        },
+        "description": {
+            "text": "REGISTER HERE: mtnguide.net.\nWe’d like you to join us at the Ouray Ice Festival! Backcountry will be hosting a Rock to Ice Clinic with veteran ice climber Angela VanWiemeersch and San Juan Mountain Guides. This clinic is for the climber seeking to learn skills and technique on ice, so they can develop into a well-rounded climber. By the end of the day, you’ll be able to properly utilize ice-specific equipment, establish effective ice techniques, and grasp the movements of ice climbing.\nRegister at the following link: mtnguide.net. Clinic is only available to Backcountry customers. There are no refunds once you register, so be sure you’re available to attend the clinic.\nDon’t have your own ice gear? All the gear needed for this clinic can be demoed free of charge at the Ouray Ice Festival from any of the participating brands.\nLocation: Ouray Ice Park in Ouray, CODate: Saturday, January 26th, 9:30 am - 3:00 pmMeet at Backcountry Airstream at 9:00 amCost: $50 (all clinic costs go towards Ouray Ice Park)\nPlease note, the full amount of clinic registration fees will be donated to Ouray Ice Park Inc. These proceeds directly support ice park operations and initiatives—helping to make your experience at the Ouray Ice Park even better than before.\nFor more festival information, go to the following link: http://ourayicepark.com/ouray-ice-festival/ "
+        },
+        "venue":
+        {
+            "address":
+            {
+                "address_1": "Ice Park Loop",
+                "address_2": null,
+                "city": "Ridgway",
+                "region": "CO",
+                "postal_code": null,
+                "country": "US",
+                "latitude": "38.01206670000001",
+                "longitude": "-107.6687528",
+                "localized_address_display": "Ice Park Loop, Ridgway, CO",
+                "localized_area_display": "Ridgway, CO",
+                "localized_multi_line_address_display": ["Ice Park Loop", "Ridgway, CO"]
+            },
+            "resource_uri": "https://www.eventbriteapi.com/v3/venues/28693048/",
+            "id": "28693048",
+            "age_restriction": null,
+            "capacity": null,
+            "name": "Ouray Ice Park",
+            "latitude": "38.01206670000001",
+            "longitude": "-107.6687528"
+        },
+        "hardcoded": "Jan 26th",
+        "start":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-01-26T09:00:00",
+            "utc": "2019-01-26T16:00:00Z"
+        },
+        "end":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-01-26T15:00:00",
+            "utc": "2019-01-26T22:00:00Z"
+        }
+    },
+    {
+        "id": "54544989532",
+        "url": "https://www.eventbrite.com/e/outdoor-retailer-snow-show-tickets-54544989532",
+        "name":
+        {
+            "text": "Outdoor Retailer Snow Show"
+        },
+        "description":
+        {
+            "text": "Outdoor Retailer + Snow Show is where the outdoor and snow industries come together, creating an unprecedented opportunity to reach influential buyers across all product segments. This is the place for brands to reach a larger, more diverse and valuable retail audience, as well as an enhanced media presence to carry their brand stories into the consumer marketplace."
+        },
+        "venue":
+        {
+            "address":
+            {
+                "address_1": "700 14th Street",
+                "address_2": null,
+                "city": "Denver",
+                "region": "CO",
+                "postal_code": "80202",
+                "country": "US",
+                "latitude": "39.7422105",
+                "longitude": "-104.99692170000003",
+                "localized_address_display": "700 14th Street, Denver, CO 80202",
+                "localized_area_display": "Denver, CO",
+                "localized_multi_line_address_display": ["700 14th Street", "Denver, CO 80202"]
+            },
+            "resource_uri": "https://www.eventbriteapi.com/v3/venues/28627928/",
+            "id": "28627928",
+            "age_restriction": null,
+            "capacity": null,
+            "name": "The Colorado Convention Center",
+            "latitude": "39.7422105",
+            "longitude": "-104.99692170000003"
+        },
+        "hardcoded": "Jan 30th - Feb 1st",
+        "start":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-01-30T08:00:00",
+            "utc": "2019-01-30T15:00:00Z"
+        },
+        "end":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-02-01T16:00:00",
+            "utc": "2019-02-01T23:00:00Z"
+        }
+    },
+    {
+        "id": "54547516089",
+        "url": "https://www.eventbrite.com/e/berthoud-backcountry-bonanza-tickets-54547516089",
+        "name":
+        {
+            "text": "Berthoud Backcountry Bonanza"
+        },
+        "description":
+        {
+            "text": "A day in the backcountry guided by yours truly. Demo gear by DPS, Dynafit and Weston Snowboards, ride with new people in both the morning and afternoon, and enjoy a day’s worth of great eats and beverages (hello, Carabiner Coffee!) with your friends from Backcountry … oh, and our Airstream will be there, of course. We’re hosting this event just for you, Denver, so be sure not to miss it. \n\nWhen?\nFebruary 1, 2019 \n\nTime?\n9:00 am - 4:30 pm\n\nEvent Location\nBerthoud Pass, CO\n\nSelect your ticket based upon demo ski size.  We will reach out prior to the event with more instructions regarding location, boot size and any other additional information.  If you do not wish to demo gear and want to use your own that is fine as well."
+        },
+        "venue":
+        {
+            "address":
+            {
+                "address_1": null,
+                "address_2": null,
+                "city": null,
+                "region": "CO",
+                "postal_code": "80438",
+                "country": "US",
+                "latitude": "39.7983203",
+                "longitude": "-105.77778490000003",
+                "localized_address_display": "CO 80438",
+                "localized_area_display": "CO",
+                "localized_multi_line_address_display": ["CO 80438"]
+            },
+            "resource_uri": "https://www.eventbriteapi.com/v3/venues/28628950/",
+            "id": "28628950",
+            "age_restriction": null,
+            "capacity": null,
+            "name": "Berthoud Pass",
+            "latitude": "39.7983203",
+            "longitude": "-105.77778490000003"
+        },
+        "hardcoded": "Feb 1st",
+        "start":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-02-01T08:00:00",
+            "utc": "2019-02-01T15:00:00Z"
+        },
+        "end":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-02-01T16:00:00",
+            "utc": "2019-02-01T23:00:00Z"
+        }
+    },
+    {
+        "id": "54555948310",
+        "url": "https://www.eventbrite.com/e/fat-biking-devils-thumb-ranch-tickets-54555948310",
+        "name":
+        {
+            "text": "Fat Biking @ Devil's Thumb Ranch"
+        },
+        "description":
+        {
+            "text": "Get back in the saddle and come for a mountain bike ride with us out at Devil's Thumb Ranch. Fat Tire Snow Bike Rentals are a great way to get after it out there on your bike, even when the snow has piled up around you. Their selection of groomed Nordic trails offers a great opportunity to pedal hard and enjoy the burn.\n\nNote: There are limited sizes available for bikes, so be sure to register ASAP! \n\nWhen\nFebruary 3rd\n9 am - 12 pm\n\nEvent Location\nDevil’s Thumb Ranch, 3530 County Rd 83, Tabernash, CO 80478\n"
+        },
+        "venue":
+        {
+            "address":
+            {
+                "address_1": "3530 County Road 83",
+                "address_2": null,
+                "city": "Tabernash",
+                "region": "CO",
+                "postal_code": "80478",
+                "country": "US",
+                "latitude": "39.9679716",
+                "longitude": "-105.78318530000001",
+                "localized_address_display": "3530 County Road 83, Tabernash, CO 80478",
+                "localized_area_display": "Tabernash, CO",
+                "localized_multi_line_address_display": ["3530 County Road 83", "Tabernash, CO 80478"]
+            },
+            "resource_uri": "https://www.eventbriteapi.com/v3/venues/28633303/",
+            "id": "28633303",
+            "age_restriction": null,
+            "capacity": null,
+            "name": "Devils Thumb Ranch Resort & Spa",
+            "latitude": "39.9679716",
+            "longitude": "-105.78318530000001"
+        },
+        "hardcoded": "Feb 3rd",
+        "start":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-02-03T09:00:00",
+            "utc": "2019-02-03T16:00:00Z"
+        },
+        "end":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-02-03T12:00:00",
+            "utc": "2019-02-03T19:00:00Z"
+        }
+    },
+    {
+        "id": "54547814983",
+        "url": "https://www.eventbrite.com/e/siawwsra-on-snow-demo-tickets-54547814983",
+        "name":
+        {
+            "text": "SIA/WWSRA On-Snow Demo"
+        },
+        "description":
+        {
+            "text": "The SIA/WWSRA On-Snow Demo, the industry’s largest international on-snow demo, is a must-attend event following Outdoor Retailer Snow Show. The On-Snow Demo is the place to test the latest equipment and accessories from major manufacturers and up and coming brands. Outdoor Retailer Snow Show brings together the snow sports and winter outdoor gear companies, giving buyers and media the opportunities to test over 100 brands.\nWhen: February 4-5, 2019Where: Copper Mountain, COOver 1600 buyers and 100+ media attended last year and with the combined 1500+ exhibitor personnel, the demo brings together the winter community where it matters – on snow. Events and entertainment follow each night, so you don’t want to miss it!"
+        },
+        "venue":
+        {
+            "address":
+            {
+                "address_1": null,
+                "address_2": null,
+                "city": "Copper Mountain",
+                "region": "CO",
+                "postal_code": "80443",
+                "country": "US",
+                "latitude": "39.501419",
+                "longitude": "-106.15162650000002",
+                "localized_address_display": "Copper Mountain, CO 80443",
+                "localized_area_display": "Copper Mountain, CO",
+                "localized_multi_line_address_display": ["Copper Mountain, CO 80443"]
+            },
+            "resource_uri": "https://www.eventbriteapi.com/v3/venues/28629127/",
+            "id": "28629127",
+            "age_restriction": null,
+            "capacity": null,
+            "name": "Copper Mountain",
+            "latitude": "39.501419",
+            "longitude": "-106.15162650000002"
+        },
+        "hardcoded": "Feb 4th - Feb 5th",
+        "start":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-02-04T08:00:00",
+            "utc": "2019-02-04T15:00:00Z"
+        },
+        "end":
+        {
+            "timezone": "America/Denver",
+            "local": "2019-02-05T16:00:00",
+            "utc": "2019-02-05T23:00:00Z"
+        }
+    }]
+}

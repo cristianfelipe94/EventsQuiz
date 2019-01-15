@@ -100,6 +100,7 @@ body {
 
 .main-event-inf-module h3{
     font-size: 24px;
+    font-weight: normal;
     margin-bottom: 10px;
 }
 
@@ -118,10 +119,10 @@ body {
 }
 
 .main-event-btn-details {
-    background-color: $mainColor;    
+    background-color: $mainColor;
     bottom: 0;
     cursor: pointer;
-    padding: 10px 0;     
+    padding: 10px 0;
     position: absolute;
     right: 0;
     text-align: right;
@@ -132,7 +133,7 @@ body {
 ///////////////////////
 
 .right-column {
-    display: inline-block;    
+    display: inline-block;
     width: 45%;
 }
 
@@ -156,14 +157,15 @@ body {
 
 .bucket-event-inf-module h3{
     font-size: 14px;
-    margin: 0;    
+    font-weight: normal;
+    margin: 0;
     margin-bottom: 10px;
 }
 
 .bucket-event-inf-module h4{
     font-size: 14px;
     font-weight: bold;
-    margin: 0;    
+    margin: 0;
     margin-bottom: 10px;
 }
 

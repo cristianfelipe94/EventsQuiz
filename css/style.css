@@ -71,6 +71,7 @@ body {
 
 .main-event-inf-module h3 {
   font-size: 24px;
+  font-weight: normal;
   margin-bottom: 10px; }
 
 .main-event-inf-module h4 {
@@ -116,6 +117,7 @@ body {
 
 .bucket-event-inf-module h3 {
   font-size: 14px;
+  font-weight: normal;
   margin: 0;
   margin-bottom: 10px; }
 
