@@ -3,19 +3,22 @@ const xmlhttp = new XMLHttpRequest();
 
 // Get elements from DOM.
 const bucketListDom = document.getElementById('js-bucket-event-list');
+const mainEventDom = document.getElementById('js-main-event');
+const mainEventBtn = document.getElementById('js-main-event-btn');
+const mainEventImgWrapper = document.getElementById('js-img-wrapper');
 
 // Add event listener.
 // Function will run as page Loads.
-xmlhttp.addEventListener ('load', function(event) {
+xmlhttp.addEventListener ('load', function() {
 
   // Save the response elements.
   const response = xmlhttp.response.events;
-  response.forEach(element => {
+  for (let e = 0; e < response.length; e++) {
 
-    const eventHardCodedDate = element.hardcoded;
-    const eventName = element.name.text;
-    const eventLocation = element.venue.name;
-    const eventTicketsURL = element.url;
+    const eventHardCodedDate = response[e].hardcoded;
+    const eventName = response[e].name.text;
+    const eventLocation = response[e].venue.name;
+    const eventTicketsURL = response[e].url;
 
     const listItemEvent = document.createElement('li');
     listItemEvent.setAttribute('class', 'bucket-event-inf-module');
@@ -40,7 +43,37 @@ xmlhttp.addEventListener ('load', function(event) {
     listItemEvent.appendChild(listItemEventURL);
 
     bucketListDom.appendChild(listItemEvent);
-  });
+
+    if (e === 0) {
+
+      listItemEvent.setAttribute('class', 'activeStateEvent');
+
+      const mainEventDate = document.createElement('h2');
+      mainEventDate.innerHTML = eventHardCodedDate;
+
+      const mainEventName = document.createElement('h3');
+      mainEventName.innerHTML = eventName;
+
+      const mainEventLocation = document.createElement('h4');
+      mainEventLocation.innerHTML = eventLocation;
+
+      const mainEventURL = document.createElement('a');
+      mainEventURL.setAttribute('href', eventTicketsURL);
+      mainEventURL.setAttribute('target', 'bank');
+      mainEventURL.innerHTML = 'Get Events Details';
+
+      const mainEventImg = document.createElement('img');
+      mainEventImg.setAttribute('class', 'event-backgroung-img');
+      mainEventImg.setAttribute('src', 'img/bg-event-1-optimized.jpg')
+      mainEventImg.setAttribute('alt', 'main event photo');
+
+      mainEventDom.appendChild(mainEventDate);
+      mainEventDom.appendChild(mainEventName);
+      mainEventDom.appendChild(mainEventLocation);
+      mainEventBtn.appendChild(mainEventURL);
+      mainEventImgWrapper.appendChild(mainEventImg);
+    }
+  };
 });
 
 // Response the system is waiting.

@@ -36,6 +36,7 @@ body {
   height: -webkit-fill-available;
   opacity: 0.7;
   position: absolute;
+  top: 0;
   width: -webkit-fill-available;
   z-index: -5; }
 
@@ -137,5 +138,55 @@ body {
   height: 30px;
   padding: 10px;
   text-decoration: none; }
+  .bucket-event-inf-module a:hover {
+    background-color: #4e8c81;
+    color: #fff;
+    transition: 0.9s ease; }
+
+.activeStateEvent, .deactivateStateEvent {
+  margin: 20px 0 30px 60px;
+  width: 70%; }
+  .activeStateEvent:hover, .deactivateStateEvent:hover {
+    background-color: #73c5a5;
+    border-left: 15px solid #73c5a5;
+    padding-left: 20px;
+    transition: 0.6s ease-out; }
+
+.activeStateEvent h2, .deactivateStateEvent h2 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 10px; }
+
+.activeStateEvent h3, .deactivateStateEvent h3 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 10px; }
+
+.activeStateEvent h4, .deactivateStateEvent h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px; }
+
+.activeStateEvent a, .deactivateStateEvent a {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 100px;
+  color: #222;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
+  padding: 10px;
+  text-decoration: none; }
+  .activeStateEvent a:hover, .deactivateStateEvent a:hover {
+    background-color: #4e8c81;
+    color: #fff;
+    transition: 0.9s ease; }
+
+.activeStateEvent {
+  border-left: 15px solid #73c5a5;
+  padding-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */
