@@ -23,7 +23,7 @@ body {
   font-size: 14px; }
 
 .left-column {
-  background-color: black;
+  background-color: #333;
   color: #fff;
   float: left;
   height: 720px;
@@ -99,7 +99,7 @@ body {
   text-align: right;
   width: 100%; }
   .main-event-btn-details:hover {
-    background-color: #8cd1b6;
+    background-color: #4e8c81;
     transition: 0.6s ease; }
 
 .right-column {
@@ -135,9 +135,9 @@ body {
 
 .bucket-event-inf-module a {
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid #333;
   border-radius: 100px;
-  color: #222;
+  color: #333;
   font-size: 12px;
   font-weight: bold;
   height: 30px;
@@ -177,9 +177,9 @@ body {
 
 .activeStateEvent a, .deactivateStateEvent a {
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid #333;
   border-radius: 100px;
-  color: #222;
+  color: #333;
   font-size: 12px;
   font-weight: bold;
   height: 30px;

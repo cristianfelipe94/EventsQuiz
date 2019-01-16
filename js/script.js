@@ -8,6 +8,7 @@ const mainEventBtn = document.getElementById('js-main-event-btn');
 const mainEventImgWrapper = document.getElementById('js-img-wrapper');
 const leftArrowDom = document.getElementById('js-left-arrow');
 const rightArrowDom = document.getElementById('js-right-arrow');
+const svg = document.getElementById('svg');
 
 // Add event listener.
 // Function will run as page Loads.
@@ -22,9 +23,17 @@ xmlhttp.addEventListener ('load', function() {
   let mainEventImg;
   let current;
 
-  // Array.
+  // Arrays.
   const eventsArray = [];
   const eventsHardCodeArrayDates = [];
+
+  const bgImgArray = [
+    '../img/bg-event-1-optimized.jpg',
+    '../img/bg-event-2-optimized.jpg',
+    '../img/bg-event-3-optimized.jpg',
+    '../img/bg-event-4-optimized.jpg',
+    '../img/bg-event-5-optimized.jpg'
+  ];
 
   // Save the response elements.
   const response = xmlhttp.response.events;
@@ -138,15 +147,6 @@ xmlhttp.addEventListener ('load', function() {
       current = clickIndex;
     });
   };
-
-
-  const bgImgArray = [
-    '../img/bg-event-1-optimized.jpg',
-    '../img/bg-event-2-optimized.jpg',
-    '../img/bg-event-3-optimized.jpg',
-    '../img/bg-event-4-optimized.jpg',
-    '../img/bg-event-5-optimized.jpg'
-  ];
 
   slider();
   function slider() {
