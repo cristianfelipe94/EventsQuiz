@@ -24,6 +24,7 @@ xmlhttp.addEventListener ('load', function() {
 
   // Array.
   const eventsArray = [];
+  const eventsHardCodeArrayDates = [];
 
   // Save the response elements.
   const response = xmlhttp.response.events;
@@ -32,16 +33,24 @@ xmlhttp.addEventListener ('load', function() {
   // Create DOM elements for each JSON's element.
   for (let e = 0; e < response.length; e++) {
 
-    const eventHardCodedDate = response[e].hardcoded;
+    // Event Information.
+    // Event name,location and url.
     const eventName = response[e].name.text;
     const eventLocation = response[e].venue.name;
     const eventTicketsURL = response[e].url;
+
+    // Event hardCoded time and full format.
+    const eventHardCodedDate = response[e].hardcoded;
+    const eventStarts = response[e].start.utc;
+    const eventEnds = response[e].end.utc;
 
     const listItemEvent = document.createElement('li');
     listItemEvent.setAttribute('class', 'bucket-event-inf-module');
 
     const listItemEventDate = document.createElement('h2');
-    listItemEventDate.innerHTML = eventHardCodedDate;
+    const endEventDateFormated = eventStarts.slice(0,10).split('-').reverse().join('.');
+    eventsHardCodeArrayDates.push(eventHardCodedDate);
+    listItemEventDate.innerHTML = endEventDateFormated;
 
     const listItemEventName = document.createElement('h3');
     listItemEventName.innerHTML = eventName;
@@ -113,9 +122,9 @@ xmlhttp.addEventListener ('load', function() {
       mainEventName.innerHTML = '';
       mainEventLocation.innerHTML = '';
 
-      mainEventDate.innerHTML = listItemEventDate.innerText;
-      mainEventName.innerHTML = listItemEventName.innerText;
-      mainEventLocation.innerHTML = listItemEventLocation.innerText;
+      mainEventDate.innerHTML = eventHardCodedDate;
+      mainEventName.innerHTML = eventName;
+      mainEventLocation.innerHTML = eventLocation;
       mainEventURL.setAttribute('href', listItemEventURL);
 
       // Every click function will get the index of the clickable event.
@@ -147,11 +156,14 @@ xmlhttp.addEventListener ('load', function() {
 
     //Show preview.
     function slideLeft (){
+
       let imgArrayIndex = bgImgArray[current - 1];
       mainEventImg.setAttribute('src', imgArrayIndex);
+
       eventsArray.forEach(element => {
         element.setAttribute('class', 'deactivateStateEvent');
       });
+
       let clickIndex = eventsArray[current - 1];
       clickIndex.setAttribute('class', 'activeStateEvent');
 
@@ -159,10 +171,10 @@ xmlhttp.addEventListener ('load', function() {
       mainEventName.innerHTML = '';
       mainEventLocation.innerHTML = '';
 
-      mainEventDate.innerHTML = eventsArray[current - 1].children["0"].firstChild.data;
-      mainEventName.innerHTML = eventsArray[current - 1].children["1"].firstChild.data;
-      mainEventLocation.innerHTML = eventsArray[current - 1].children["2"].firstChild.data;
-      let listItemEventURL = eventsArray[current - 1].children["3"].href;
+      mainEventDate.innerHTML = eventsHardCodeArrayDates[current - 1];
+      mainEventName.innerHTML = clickIndex.children["1"].firstChild.data;
+      mainEventLocation.innerHTML = clickIndex.children["2"].firstChild.data;
+      let listItemEventURL = clickIndex.children["3"].href;
       mainEventURL.setAttribute('href', listItemEventURL);
 
       current--;
@@ -170,11 +182,14 @@ xmlhttp.addEventListener ('load', function() {
 
     //Show preview.
     function slideRight (){
+
       let imgArrayIndex = bgImgArray[current + 1];
       mainEventImg.setAttribute('src', imgArrayIndex);
+
       eventsArray.forEach(element => {
         element.setAttribute('class', 'deactivateStateEvent');
       });
+
       let clickIndex = eventsArray[current + 1];
       clickIndex.setAttribute('class', 'activeStateEvent');
 
@@ -182,10 +197,10 @@ xmlhttp.addEventListener ('load', function() {
       mainEventName.innerHTML = '';
       mainEventLocation.innerHTML = '';
 
-      mainEventDate.innerHTML = eventsArray[current + 1].children["0"].firstChild.data;
-      mainEventName.innerHTML = eventsArray[current + 1].children["1"].firstChild.data;
-      mainEventLocation.innerHTML = eventsArray[current + 1].children["2"].firstChild.data;
-      let listItemEventURL = eventsArray[current + 1].children["3"].href;
+      mainEventDate.innerHTML = eventsHardCodeArrayDates[current + 1];
+      mainEventName.innerHTML = clickIndex.children["1"].firstChild.data;
+      mainEventLocation.innerHTML = clickIndex.children["2"].firstChild.data;
+      let listItemEventURL = clickIndex.children["3"].href;
       mainEventURL.setAttribute('href', listItemEventURL);
 
       current++;
@@ -203,7 +218,7 @@ xmlhttp.addEventListener ('load', function() {
     // Right Arrow click.
     // Function will run on click.
     rightArrowDom.addEventListener('click', function (){
-      if (current === bgImgArray.length-1){
+      if (current === bgImgArray.length - 1){
           current =- 1;
       }
       slideRight();
