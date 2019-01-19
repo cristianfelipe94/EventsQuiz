@@ -38,7 +38,6 @@ xmlhttp.addEventListener ('load', function() {
 
   // Save the response elements.
   const response = xmlhttp.response.events;
-  console.log(response);
 
   // Iterate response elements.
   // Create DOM elements for each JSON's element.
