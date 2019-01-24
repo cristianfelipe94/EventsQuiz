@@ -33,7 +33,7 @@ xmlhttp.addEventListener ('load', function() {
     '../img/bg-event-2-optimized.jpg',
     '../img/bg-event-3-optimized.jpg',
     '../img/bg-event-4-optimized.jpg',
-    '../img/bg-event-5-optimized.jpg'
+    '../img/bg-event-5-optimized.jpg',
   ];
 
   // Save the response elements.
@@ -231,6 +231,6 @@ xmlhttp.addEventListener ('load', function() {
 xmlhttp.responseType = 'json';
 
 // Request GET from the API Key.
-xmlhttp.open("GET", "../event-api.json");
+xmlhttp.open("GET", "event-api.json");
 // Sent the Request.
 xmlhttp.send();
