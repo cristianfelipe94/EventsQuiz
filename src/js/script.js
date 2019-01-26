@@ -13,7 +13,7 @@ const svg = document.getElementById('svg');
 
 // Add event listener.
 // Function will run as page Loads.
-xmlhttp.addEventListener ('load', function() {
+xmlhttp.addEventListener('load', function(){
 
     // Initilialized elements internally in main function.
     // This variables will be use on several functions.
