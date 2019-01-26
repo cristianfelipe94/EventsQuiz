@@ -1,5 +1,6 @@
 // IIFE function.
-(function () {
+
+(function () { // eslint-disable-line
 
     // Arrays.
     const eventsArray = [];
@@ -28,7 +29,7 @@
 
     // Add event listener.
     // Function will run as page Loads.
-    xmlhttp.addEventListener('load', function() {
+    xmlhttp.addEventListener('load', function() { // eslint-disable-line
         // Save the response elements.
         const response = xmlhttp.response.events;
 
@@ -78,7 +79,7 @@
 
         // Function will create elements on Main Event Block.
         // Arguments: Element and Index, used to get Background Image from Event.
-        function createMainEvent(element, elementImgIndex){
+        function createMainEvent(element, elementImgIndex) {
 
             // Create Li.
             // Get basic information from main event.
@@ -112,16 +113,16 @@
 
         // Function will create elements on Bucket Events Block.
         // Arguments: Basic Event information to create events.
-        function createBucketElement (endEventDateFormated, eventName, eventLocation, eventTicketsURL) {
+        function createBucketElement(endEventDateFormatedKey, eventNameKey, eventLocationKey, eventTicketsURLKey) {
 
             // Create Li.
             // Get basic information from main event.
             const $newListItem = $('<li>')
                 .attr('class', 'bucket-event-inf-module')
-                .append($('<h2>').append(endEventDateFormated))
-                .append($('<h3>').append(eventName))
-                .append($('<h4>').append(eventLocation))
-                .append($('<a>').append('Get Events Details').attr('href', eventTicketsURL).attr('target', 'bank'))
+                .append($('<h2>').append(endEventDateFormatedKey))
+                .append($('<h3>').append(eventNameKey))
+                .append($('<h4>').append(eventLocationKey))
+                .append($('<a>').append('Get Events Details').attr('href', eventTicketsURLKey).attr('target', 'bank'))
             ;
 
             // Push elements into array to create iterations and change element's styles and info.
@@ -132,7 +133,7 @@
 
             // EventListener will clear array elements's style.
             // And set new information on main event banner.
-            $newListItem.click(function() {
+            $newListItem.click(function() { // eslint-disable-line
 
                 $('.listItemDelete').remove();
 
@@ -152,7 +153,7 @@
                 // A different order in slide show.
                 current = clickIndex;
             });
-        };
+        }
     });
 
     // Response the system is waiting.
