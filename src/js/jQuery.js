@@ -1,9 +1,11 @@
+// IIFE function.
 (function () {
 
     // Arrays.
     const eventsArray = [];
     const eventsHardCodeArrayDates = [];
 
+    // Image Src arrays.
     const bgImgArray = [
         '../img/bg-event-1-optimized.jpg',
         '../img/bg-event-2-optimized.jpg',
@@ -29,24 +31,22 @@
     xmlhttp.addEventListener('load', function() {
         // Save the response elements.
         const response = xmlhttp.response.events;
-        console.log(response);
 
         // Event Information.
         // Event name,location and url.
-
+        // Initialized variables from response.
         let eventName = null;
         let eventLocation = null;
         let eventTicketsURL = null;
-
-        // Event hardCoded time and full format.
         let eventHardCodedDate = null;
         let eventStarts = null;
         let eventEnds = null;
-
         let endEventDateFormated = null;
 
+        // This function will create all the elements from the response.
         function loadEvents() {
             for (let e = 0; e < response.length; e++) {
+                // Basic Events information.
                 eventName = response[e].name.text;
                 eventLocation = response[e].venue.name;
                 eventTicketsURL = response[e].url;
@@ -56,19 +56,32 @@
                 eventStarts = response[e].start.utc;
                 eventEnds = response[e].end.utc;
 
+                // Event date formated.
                 endEventDateFormated = eventStarts.slice(0, 10).split('-').reverse().join('.');
                 eventsHardCodeArrayDates.push(eventHardCodedDate);
 
+                // Passed values on this function to create elements on Bucket List.
                 createBucketElement (endEventDateFormated, eventName, eventLocation, eventTicketsURL);
             };
 
+            // Get the first element on array.
+            // Set background image of First Element.
+            // Passed Element and Index number on to function.
+            // Create an event on Main Event Block.
             const $currentMainEvent = eventsArray[0];
             createMainEvent($currentMainEvent, [0]);
             $currentMainEvent.attr('class', 'activeStateEvent');
         };
 
+        // Run function to create elements from response.
+        loadEvents();
+
+        // Function will create elements on Main Event Block.
+        // Arguments: Element and Index, used to get Background Image from Event.
         function createMainEvent(element, elementImgIndex){
 
+            // Create Li.
+            // Get basic information from main event.
             const $newListMainItem = $('<li>')
                 .addClass('listItemDelete')
                 .addClass('mainEventListItem')
@@ -97,9 +110,12 @@
             $('#js-main-event-btn').append($listURL);
         };
 
-        loadEvents();
-
+        // Function will create elements on Bucket Events Block.
+        // Arguments: Basic Event information to create events.
         function createBucketElement (endEventDateFormated, eventName, eventLocation, eventTicketsURL) {
+
+            // Create Li.
+            // Get basic information from main event.
             const $newListItem = $('<li>')
                 .attr('class', 'bucket-event-inf-module')
                 .append($('<h2>').append(endEventDateFormated))
@@ -108,12 +124,12 @@
                 .append($('<a>').append('Get Events Details').attr('href', eventTicketsURL).attr('target', 'bank'))
             ;
 
-            // Create an array of elements all ready created.
             // Push elements into array to create iterations and change element's styles and info.
             eventsArray.push($newListItem);
 
             // Add element with completed information into DOM element.
             $('#js-bucket-event-list').append($newListItem);
+
             // EventListener will clear array elements's style.
             // And set new information on main event banner.
             $newListItem.click(function() {
@@ -137,7 +153,6 @@
                 current = clickIndex;
             });
         };
-
     });
 
     // Response the system is waiting.
