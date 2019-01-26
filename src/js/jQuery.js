@@ -45,20 +45,26 @@
 
         let endEventDateFormated = null;
 
-        for (let e = 0; e < response.length; e++) {
-            eventName = response[e].name.text;
-            eventLocation = response[e].venue.name;
-            eventTicketsURL = response[e].url;
+        function loadEvents() {
+            for (let e = 0; e < response.length; e++) {
+                eventName = response[e].name.text;
+                eventLocation = response[e].venue.name;
+                eventTicketsURL = response[e].url;
 
-            // Event hardCoded time and full format.
-            eventHardCodedDate = response[e].hardcoded;
-            eventStarts = response[e].start.utc;
-            eventEnds = response[e].end.utc;
+                // Event hardCoded time and full format.
+                eventHardCodedDate = response[e].hardcoded;
+                eventStarts = response[e].start.utc;
+                eventEnds = response[e].end.utc;
 
-            endEventDateFormated = eventStarts.slice(0, 10).split('-').reverse().join('.');
-            eventsHardCodeArrayDates.push(eventHardCodedDate);
+                endEventDateFormated = eventStarts.slice(0, 10).split('-').reverse().join('.');
+                eventsHardCodeArrayDates.push(eventHardCodedDate);
 
-            createBucketElement (endEventDateFormated, eventName, eventLocation, eventTicketsURL);
+                createBucketElement (endEventDateFormated, eventName, eventLocation, eventTicketsURL);
+            };
+
+            const $currentMainEvent = eventsArray[0];
+            createMainEvent($currentMainEvent, [0]);
+            $currentMainEvent.attr('class', 'activeStateEvent');
         };
 
         function createMainEvent(element, elementImgIndex){
@@ -90,6 +96,8 @@
             $('#js-img-wrapper').append($listMainImg);
             $('#js-main-event-btn').append($listURL);
         };
+
+        loadEvents();
 
         function createBucketElement (endEventDateFormated, eventName, eventLocation, eventTicketsURL) {
             const $newListItem = $('<li>')

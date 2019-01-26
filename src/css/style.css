@@ -118,6 +118,9 @@ body {
     padding-left: 20px;
     transition: 0.6s ease-out; }
 
+.bucket-event-style {
+  list-style: none; }
+
 .bucket-event-inf-module h2 {
   font-family: Georgia, serif;
   font-size: 28px;
