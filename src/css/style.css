@@ -34,7 +34,7 @@ body {
 
 .event-backgroung-img {
   height: -webkit-fill-available;
-  opacity: 0.7;
+  opacity: 0.6;
   position: absolute;
   top: 0;
   width: -webkit-fill-available;
@@ -56,6 +56,9 @@ body {
 .main-event-inf-module {
   color: #fff;
   padding: 20px 0 0 14px; }
+
+.mainEventListItem {
+  list-style: none; }
 
 .next-event {
   background-color: #73c5a5;

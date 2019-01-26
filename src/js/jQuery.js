@@ -45,11 +45,7 @@
 
         let endEventDateFormated = null;
 
-
-        // Iterate response elements.
-        // Create DOM elements for each JSON's element.
         for (let e = 0; e < response.length; e++) {
-
             eventName = response[e].name.text;
             eventLocation = response[e].venue.name;
             eventTicketsURL = response[e].url;
@@ -63,36 +59,29 @@
             eventsHardCodeArrayDates.push(eventHardCodedDate);
 
             createBucketElement (endEventDateFormated, eventName, eventLocation, eventTicketsURL);
-
-            // If the element is 0 Index.
-            // Element and information will be set in the main Event Banner.
-            if ( e === 0) {
-                createMainEvent(e[0], [0]);
-            }
         };
-
 
         function createMainEvent(element, elementImgIndex){
 
-            $(element).attr('class', 'activeStateEvent');
-
             const $newListMainItem = $('<li>')
-                .attr('class', 'listItemDelete')
-                .append($('<h2>').append(eventHardCodedDate))
-                .append($('<h3>').append(eventName))
-                .append($('<h4>').append(eventLocation))
+                .addClass('listItemDelete')
+                .addClass('mainEventListItem')
+                .append($('<h2>').append(element[0].children[0].innerHTML))
+                .append($('<h3>').append(element[0].children[1].innerHTML))
+                .append($('<h4>').append(element[0].children[2].innerHTML))
             ;
 
-            const $listMainImg = $('img')
-                .attr('class', 'listItemDelete')
+            const $listMainImg = $('<img>')
+                .addClass('listItemDelete')
                 .attr('src', bgImgArray[elementImgIndex])
                 .attr('class', 'event-backgroung-img')
                 .attr('alt', 'main event photo')
             ;
 
-            const $listURL = $('a')
-                .attr('class', 'listItemDelete')
-                .attr('href', eventTicketsURL)
+            const $listURL = $('<a>')
+                .addClass('listItemDelete')
+                .append('Get Events Details')
+                .attr('href', element[0].children[3].href)
                 .attr('target', 'bank')
             ;
 
@@ -121,17 +110,19 @@
             // And set new information on main event banner.
             $newListItem.click(function() {
 
+                $('.listItemDelete').remove();
+
+                $('.event-backgroung-img').remove();
+
                 $('#js-bucket-event-list li').attr('class', 'deactivateStateEvent');
 
                 $newListItem.attr('class', 'activeStateEvent');
-
-                $('.listItemDelete').remove();
 
                 // Every click function will get the index of the clickable event.
                 // And will change photo.
                 const clickIndex = eventsArray.indexOf($newListItem);
 
-                createMainEvent($newListItem, clickIndex);
+                createMainEvent(eventsArray[clickIndex], clickIndex);
 
                 // Current element clicked will change to generate.
                 // A different order in slide show.
