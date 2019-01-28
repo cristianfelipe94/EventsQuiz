@@ -152,8 +152,73 @@
                 // Current element clicked will change to generate.
                 // A different order in slide show.
                 current = clickIndex;
+                return current;
             });
+
+            slider();
+            function slider() {
+
+                current = 0;
+
+                //Show preview.
+                function slideLeft () {
+
+                    const $imgArrayIndex = $(eventsArray[current - 1][0]);
+                    console.log($imgArrayIndex);
+
+                    $('#js-bucket-event-list li').attr('class', 'deactivateStateEvent');
+
+                    $imgArrayIndex.addClass('activeStateEvent');
+
+                    $('.listItemDelete').remove();
+
+                    $('.event-backgroung-img').remove();
+
+                    createMainEvent($imgArrayIndex, [current - 1]);
+
+                    current --;
+                }
+
+                //Show preview.
+                function slideRight () {
+
+                    const $imgArrayIndex = $(eventsArray[current + 1][0]);
+                    console.log($imgArrayIndex);
+
+                    $('#js-bucket-event-list li').attr('class', 'deactivateStateEvent');
+
+                    $imgArrayIndex.addClass('activeStateEvent');
+
+                    $('.listItemDelete').remove();
+
+                    $('.event-backgroung-img').remove();
+
+                    createMainEvent($imgArrayIndex, [current + 1]);
+
+                    current ++;
+                }
+
+                // Left Arrow click.
+                // Function will run on click.
+                $('#js-left-arrow').click(function() {
+                    if (current === 0) {
+                        current = bgImgArray.length;
+                        slideLeft();
+                    }
+                    slideLeft();
+                });
+
+                // Right Arrow click.
+                // Function will run on click.
+                $('#js-right-arrow').click(function() {
+                    if (current === bgImgArray.length - 1) {
+                        current =- 1;
+                    }
+                    slideRight();
+                });
+            }
         }
+
     });
 
     // Response the system is waiting.
