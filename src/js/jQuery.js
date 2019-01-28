@@ -164,7 +164,6 @@
                 function slideLeft () {
 
                     const $imgArrayIndex = $(eventsArray[current - 1][0]);
-                    console.log($imgArrayIndex);
 
                     $('#js-bucket-event-list li').attr('class', 'deactivateStateEvent');
 
@@ -182,8 +181,8 @@
                 //Show preview.
                 function slideRight () {
 
+                    console.log($(eventsArray));
                     const $imgArrayIndex = $(eventsArray[current + 1][0]);
-                    console.log($imgArrayIndex);
 
                     $('#js-bucket-event-list li').attr('class', 'deactivateStateEvent');
 
@@ -202,8 +201,10 @@
                 // Function will run on click.
                 $('#js-left-arrow').click(function() {
                     if (current === 0) {
-                        current = bgImgArray.length;
+                        current = eventsArray.length;
+                        console.log(current);
                         slideLeft();
+                        console.log(current);
                     }
                     slideLeft();
                 });
@@ -213,6 +214,9 @@
                 $('#js-right-arrow').click(function() {
                     if (current === bgImgArray.length - 1) {
                         current =- 1;
+                        console.log(current);
+                        slideRight();
+                        console.log(current);
                     }
                     slideRight();
                 });
