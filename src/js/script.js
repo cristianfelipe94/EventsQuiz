@@ -9,11 +9,10 @@ const mainEventBtn = document.getElementById('js-main-event-btn');
 const mainEventImgWrapper = document.getElementById('js-img-wrapper');
 const leftArrowDom = document.getElementById('js-left-arrow');
 const rightArrowDom = document.getElementById('js-right-arrow');
-const svg = document.getElementById('svg');
 
 // Add event listener.
 // Function will run as page Loads.
-xmlhttp.addEventListener('load', function(){
+xmlhttp.addEventListener('load', function() {
 
     // Initilialized elements internally in main function.
     // This variables will be use on several functions.

@@ -215,7 +215,6 @@
             });
         }
     });
-
     // Response the system is waiting.
     xmlhttp.responseType = 'json';
 
@@ -223,5 +222,4 @@
     xmlhttp.open('GET', 'event-api.json');
     // Sent the Request.
     xmlhttp.send();
-
 }());
