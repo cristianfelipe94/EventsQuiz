@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="normalize stylesheet" href="normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <meta name = "CSP" content = "'Content-Security-Policy', "default-src 'none'", "form-action 'none'", "frame-ancestors 'none'", "style-src 'self'", "script-src 'self' 'https://use.fontawesome.com'", "img-src 'self'"">
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    <meta name="CSP" content="'Content-Security-Policy', " default-src 'none' ", "form-action 'none' ", "frame-ancestors
+      'none' ", "style-src 'self' ", "script-src 'self' 'https://use.fontawesome.com' ", "img-src 'self' "">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
     </script>
     <title>JQuery</title>
-    </head>
-    <body>
+  </head>
 
-    <h2 class="main-title-page">Upcoming Events and Activities</h2>
-    <p class="sub-title-page">We've got a full schedule. Follow us to see if Gearheads are hosting exciting events in your area.</p>
+  <body>
+    <h2 class="event__title">Upcoming Events and Activities</h2>
 
-    <div class="left-column" id="js-img-wrapper">
+    <p class="event__subtitle">
+      We've got a full schedule. Follow us to see if Gearheads are hosting exciting events in your area.
+    </p>
 
-        <img src="img/arrow-left.svg" alt="arrow left" class="arrow arrow-left" id="js-left-arrow">
-        <img src="img/arrow-right.svg" alt="arrow right" class="arrow  arrow-right" id="js-right-arrow">
+    <div class="main__event" id="js-img-wrapper">
+      <img src="img/arrow-left.svg" alt="arrow left" class="event__arrow arrow__left" id="js-left-arrow">
+      <img src="img/arrow-right.svg" alt="arrow right" class="event__arrow  arrow__right" id="js-right-arrow">
 
-        <div class="main-event-inf-module" id="js-main-event">
+      <div class="main__event__info" id="js-main-event">
+        <p class="next__event">Next Event</p>
 
-        <p class="next-event">Next Event</p>
+        <div class="event__details" id="js-main-event-btn"></div>
 
-        <div class="main-event-btn-details" id="js-main-event-btn">
-        </div>
-
-        </div>
+      </div>
     </div>
 
-    <div class="right-column">
-
-        <ul id="js-bucket-event-list" class="bucket-event-style">
-        </ul>
+    <div class="bucket__events">
+      <ul class="bucket__events__list" id="js-bucket-event-list" ></ul>
 
     </div>
+
     <!--<script src="js/script.js"></script>-->
     <script src="js/jQuery.js"></script>
-</body>
+  </body>
 </html>

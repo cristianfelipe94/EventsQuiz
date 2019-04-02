@@ -20,18 +20,18 @@ body {
 // Title Styles.
 ////////////////
 
-.main-title-page , .sub-title-page {
+.event__title , .event__subtitle {
     display: block;
     text-align-last: center;
 }
 
-.main-title-page {
+.event__title {
     font-family: $mainFontFamily;
     font-size: 45px;
     margin-bottom: 10px;
 }
 
-.sub-title-page {
+.event__subtitle {
     color: $secondaryColor;
     font-size: 14px;
 }
@@ -39,7 +39,7 @@ body {
 // Left Column Styles.
 //////////////////////
 
-.left-column {
+.main__event {
     background-color: $secondaryColor;
     color: $thirdColor;
     float: left;
@@ -50,7 +50,7 @@ body {
     z-index: 0;
 }
 
-.event-backgroung-img {
+.event__background__img {
     height: -webkit-fill-available;
     opacity: 0.6;
     position: absolute;
@@ -59,7 +59,7 @@ body {
     z-index: -5;
 }
 
-.arrow {
+.event__arrow {
     bottom: 50%;
     cursor: pointer;
     position: absolute;
@@ -67,24 +67,24 @@ body {
     width: 45px;
 }
 
-.arrow-left {
+.arrow__left {
     left: -45px;
 }
 
-.arrow-right {
+.arrow__right{
     right: -45px;
 }
 
-.main-event-inf-module {
+.main__event__info {
     color: $thirdColor;
     padding: 20px 0 0 14px;
 }
 
-.mainEventListItem {
+.event__list__item {
     list-style: none;
 }
 
-.next-event {
+.next__event {
     background-color: $mainColor;
     color: $secondaryColor;
     display: inline-block;
@@ -94,25 +94,25 @@ body {
     padding: 10px;
 }
 
-.main-event-inf-module h2{
+.main__event__info h2{
     font-family: $mainFontFamily;
     font-size: 40px;
     margin-bottom: 10px;
 }
 
-.main-event-inf-module h3{
+.main__event__info h3{
     font-size: 24px;
     font-weight: normal;
     margin-bottom: 10px;
 }
 
-.main-event-inf-module h4{
+.main__event__infoh4{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.main-event-inf-module a{
+.main__event__info a{
     color: $thirdColor;
     cursor: pointer;
     font-size: 10px;
@@ -121,7 +121,7 @@ body {
     text-decoration: none;
 }
 
-.main-event-btn-details {
+.event__details {
     background-color: $mainColor;
     bottom: 0;
     cursor: pointer;
@@ -139,7 +139,7 @@ body {
 // Right Column Styles.
 ///////////////////////
 
-.right-column {
+.bucket__events {
     display: inline-block;
     width: 45%;
 }
@@ -155,7 +155,7 @@ body {
     }
 }
 
-.bucket-event-style {
+.bucket__events__list {
     list-style: none;
 }
 
@@ -249,7 +249,7 @@ body {
     }
 }
 
-.activeStateEvent {
+.event__state__active {
     @extend%active-bucket-event-wrapper;
     @extend %active-bucket-event-h2;
     @extend %ative-bucket-event-h3;
@@ -259,7 +259,7 @@ body {
     padding-left: 10px;
 }
 
-.deactivateStateEvent {
+.event__state__deactive {
     @extend%active-bucket-event-wrapper;
     @extend %active-bucket-event-h2;
     @extend %ative-bucket-event-h3;
