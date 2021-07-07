@@ -9,20 +9,20 @@ body {
 .clearing-margin {
   margin-top: 0; }
 
-.main-title-page, .sub-title-page {
+.event__title, .event__subtitle {
   display: block;
   text-align-last: center; }
 
-.main-title-page {
+.event__title {
   font-family: Georgia, serif;
   font-size: 45px;
   margin-bottom: 10px; }
 
-.sub-title-page {
+.event__subtitle {
   color: #333;
   font-size: 14px; }
 
-.left-column {
+.main__event {
   background-color: #333;
   color: #fff;
   float: left;
@@ -32,32 +32,35 @@ body {
   width: 55%;
   z-index: 0; }
 
-.event-backgroung-img {
+.event__background__img {
   height: -webkit-fill-available;
-  opacity: 0.7;
+  opacity: 0.6;
   position: absolute;
   top: 0;
   width: -webkit-fill-available;
   z-index: -5; }
 
-.arrow {
+.event__arrow {
   bottom: 50%;
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: 45px; }
 
-.arrow-left {
+.arrow__left {
   left: -45px; }
 
-.arrow-right {
+.arrow__right {
   right: -45px; }
 
-.main-event-inf-module {
+.main__event__info {
   color: #fff;
   padding: 20px 0 0 14px; }
 
-.next-event {
+.event__list__item {
+  list-style: none; }
+
+.next__event {
   background-color: #73c5a5;
   color: #333;
   display: inline-block;
@@ -66,22 +69,22 @@ body {
   font-weight: bold;
   padding: 10px; }
 
-.main-event-inf-module h2 {
+.main__event__info h2 {
   font-family: Georgia, serif;
   font-size: 40px;
   margin-bottom: 10px; }
 
-.main-event-inf-module h3 {
+.main__event__info h3 {
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 10px; }
 
-.main-event-inf-module h4 {
+.main__event__infoh4 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px; }
 
-.main-event-inf-module a {
+.main__event__info a {
   color: #fff;
   cursor: pointer;
   font-size: 10px;
@@ -89,7 +92,7 @@ body {
   padding-left: 70%;
   text-decoration: none; }
 
-.main-event-btn-details {
+.event__details {
   background-color: #73c5a5;
   bottom: 0;
   cursor: pointer;
@@ -98,11 +101,11 @@ body {
   right: 0;
   text-align: right;
   width: 100%; }
-  .main-event-btn-details:hover {
+  .event__details:hover {
     background-color: #4e8c81;
     transition: 0.6s ease; }
 
-.right-column {
+.bucket__events {
   display: inline-block;
   width: 45%; }
 
@@ -114,6 +117,9 @@ body {
     border-left: 15px solid #73c5a5;
     padding-left: 20px;
     transition: 0.6s ease-out; }
+
+.bucket__events__list {
+  list-style: none; }
 
 .bucket-event-inf-module h2 {
   font-family: Georgia, serif;
@@ -148,34 +154,34 @@ body {
     color: #fff;
     transition: 0.9s ease; }
 
-.activeStateEvent, .deactivateStateEvent {
+.event__state__active, .event__state__deactive {
   margin: 20px 0 30px 60px;
   width: 70%; }
-  .activeStateEvent:hover, .deactivateStateEvent:hover {
+  .event__state__active:hover, .event__state__deactive:hover {
     background-color: #73c5a5;
     border-left: 15px solid #73c5a5;
     padding-left: 20px;
     transition: 0.6s ease-out; }
 
-.activeStateEvent h2, .deactivateStateEvent h2 {
+.event__state__active h2, .event__state__deactive h2 {
   font-family: Georgia, serif;
   font-size: 28px;
   margin: 0;
   margin-bottom: 10px; }
 
-.activeStateEvent h3, .deactivateStateEvent h3 {
+.event__state__active h3, .event__state__deactive h3 {
   font-size: 14px;
   font-weight: normal;
   margin: 0;
   margin-bottom: 10px; }
 
-.activeStateEvent h4, .deactivateStateEvent h4 {
+.event__state__active h4, .event__state__deactive h4 {
   font-size: 14px;
   font-weight: bold;
   margin: 0;
   margin-bottom: 10px; }
 
-.activeStateEvent a, .deactivateStateEvent a {
+.event__state__active a, .event__state__deactive a {
   background-color: #fff;
   border: 1px solid #333;
   border-radius: 100px;
@@ -185,12 +191,12 @@ body {
   height: 30px;
   padding: 10px;
   text-decoration: none; }
-  .activeStateEvent a:hover, .deactivateStateEvent a:hover {
+  .event__state__active a:hover, .event__state__deactive a:hover {
     background-color: #4e8c81;
     color: #fff;
     transition: 0.9s ease; }
 
-.activeStateEvent {
+.event__state__active {
   border-left: 15px solid #73c5a5;
   padding-left: 10px; }
 
